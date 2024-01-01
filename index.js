@@ -1,7 +1,11 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const fs = require('fs');
+require('dotenv').config();
 
-const genAI = new GoogleGenerativeAI("AIzaSyCaV6_av7TOZWpmhRMrePtDfEUZI25JGGs");
+console.log(process.env.API_KEY)
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+
+
 
 const threads = {
   thread1: {
